@@ -118,7 +118,9 @@ a:active {
 .button:hover {
     color: var(--button-hover-color);
     text-decoration: var(--button-hover-text-decoration);
-    background: var(--button-hover-background);    
+    background-color: var(--button-hover-background);
+    transition-duration: var(--transition-duration);
+    transition-property: color, background-color;
 }
 .visually-hidden {
     display: none;
@@ -396,8 +398,11 @@ ul.row {
 
 .card-work:hover .card-image {
     transform: scale(1.2);
+    transition: transform var(--transition-duration) var(--transition-cubic-bezier);
+
 }
 
 .card-work:hover .card-outer {
     transform: scale(0.95);
+    transition: transform var(--transition-duration) var(--transition-cubic-bezier);
 }
